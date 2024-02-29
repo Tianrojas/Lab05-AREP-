@@ -36,7 +36,8 @@ El repositorio contiene el código fuente del proyecto, que está estructurado y
   ![GET](img/sin.png)
 - Un ejemplo de la interfaz
   ![GET](img/interfaz.png)
-
+- Containers construidos
+  ![GET](img/img.png)
 ## Instrucciones de Ejecución
 
 Para ejecutar el proyecto, sigue estos pasos:
