@@ -76,5 +76,12 @@ Para ejecutar el proyecto, sigue estos pasos:
 1. Clona el repositorio desde GitHub.
 2. **Compilar el Proyecto:** Ejecutar `mvn compile`.
 3. **Ejecutar el Servidor Spark:** Ejecutar `java -cp "target/classes;target/dependency/*" co.edu.escuelaing.sparkdockerdemolive.SparkWebServer`.
-4. **Acceder al Cliente Web:** Entrar desde un navegador a `http://localhost:4567`.
+4. **Acceder al Cliente Web:** Entrar desde un navegador a `http://localhost:4567/client.html`.
+
+Para ejecutar el container:
+
+1. Inice e ingrese a su perfil de dockerDesktop
+2. Realice un pull de la imagen `tianrojas/taller5.arep:latest`
+3. **Cree un container con dicha imagen** Ejecutar `docker run -d -p 34000:46000 --name firstdockercontainer tianrojas/taller5.arep`
+4. **Acceder al Cliente Web:** Entrar desde un navegador a `http://localhost:34000/client.html`
 
