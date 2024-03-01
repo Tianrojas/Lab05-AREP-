@@ -3,10 +3,38 @@
 ## Descripción
 
 Este proyecto consiste en la implementación de un servidor web en Java con Spark, que puede manejar solicitudes HTTP y proporcionar servicios REST para calcular funciones matemáticas y verificar si una cadena es un palíndromo. Además, se incluye un cliente web para interactuar con estos servicios.
+Enfocandoce así, en la modularización mediante la virtualización utilizando Docker y AWS. La aplicación desarrollada es una pequeña aplicación web utilizando el micro-framework Spark Java. Posteriormente, se construye un contenedor Docker para la aplicación y se despliega localmente. Luego, se crea un repositorio en DockerHub y se sube la imagen del contenedor. Finalmente, se despliega el contenedor en una máquina virtual en AWS. El taller consta de las siguientes partes:
+
+### Creación de la aplicación web
+
+- Se crea un proyecto Java utilizando Maven.
+- Se importan las dependencias de Spark Java en el archivo `pom.xml`.
+- Se asegura que el proyecto compile correctamente.
+- Se ejecuta la aplicación para verificar su funcionamiento en `http://localhost:4567/hello`.
+
+### Creación de la imagen Docker y despliegue local
+
+- Se crea un archivo `Dockerfile` para construir la imagen Docker.
+- Se utiliza Docker CLI para construir la imagen y verificar su creación.
+- Se ejecutan múltiples instancias del contenedor Docker y se verifica que estén corriendo.
+- Se usa `docker-compose` para automatizar la configuración de los contenedores.
+- Se verifica que los servicios se hayan creado correctamente.
+
+### Subida de la imagen a Docker Hub
+
+- Se crea una cuenta en Docker Hub y se verifica el correo.
+- Se crea un repositorio en Docker Hub.
+- Se etiqueta la imagen local con el nombre del repositorio en Docker Hub.
+- Se autentica en Docker Hub y se sube la imagen.
+- Se verifica que la imagen esté disponible en Docker Hub.
 
 ## Arquitectura del Proyecto
 
 El proyecto sigue una arquitectura cliente-servidor, donde el servidor Spark actúa como el servidor que escucha las solicitudes entrantes de los clientes y procesa las solicitudes. El cliente web envía solicitudes HTTP al servidor para realizar cálculos matemáticos o verificar si una cadena es un palíndromo.
+
+## Generación de Imágenes para Desplegar
+
+Para generar la imagen Docker, se utiliza el `Dockerfile` proporcionado en la raíz del proyecto. Se construye la imagen utilizando el comando `docker build`. Luego, se ejecutan múltiples instancias del contenedor Docker con `docker run`, y se verifica su funcionamiento accediendo a las rutas especificadas en el navegador.
 
 ## Estructura del Repositorio
 
@@ -30,14 +58,17 @@ El repositorio contiene el código fuente del proyecto, que está estructurado y
     });
     ```
 
-- Un ejemplo de una solicitud GET para calcular el seno:
+- Un ejemplo de una solicitud GET para calcular el seno: \
   ![GET](img/pal.png)
-- Un ejemplo de una solicitud GET para verificar si una cadena es un palíndromo:
+- Un ejemplo de una solicitud GET para verificar si una cadena es un palíndromo: \
   ![GET](img/sin.png)
-- Un ejemplo de la interfaz
+- Un ejemplo de la interfaz: \
   ![GET](img/interfaz.png)
-- Containers construidos
+- Containers construidos:  \
   ![GET](img/img.png)
+- Desplegue realizado: \
+  ![image](https://github.com/Tianrojas/Lab05-AREP-/assets/62759668/d5405157-c65c-49ae-b788-82c804c85429)
+
 ## Instrucciones de Ejecución
 
 Para ejecutar el proyecto, sigue estos pasos:
